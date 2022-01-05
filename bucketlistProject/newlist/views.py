@@ -3,7 +3,7 @@ from .models import Buckets
 from django.http import HttpResponse
 
 # Create your views here.
-def addlist(request):
-    return HttpResponse("addlist page")
+def newlist(request):
+    # return HttpResponse("newlist page")
     # buckets = Buckets.objects
-    # return render(request, 'addlist.html')
+    return render(request, 'newlist.html')

@@ -8,3 +8,7 @@ def home(request):
     # return HttpResponse("Hello, world. You're at the polls home.")
     buckets = Buckets.objects
     return render(request, 'mainpage.html', {'buckets' : buckets})
+
+
+def addlist(request):
+    return render(request, 'newlist.html')
