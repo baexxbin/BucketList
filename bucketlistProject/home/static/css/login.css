@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Dolbomche_R';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/Dolbomche_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div{
+    font-family: 'Dolbomche_R';
+}
+
+#login_box {
+    width: 600px;
+    margin: 0px auto;
+    padding: 1px;
+}
+
+#login_title {
+    padding-bottom: 5px;
+    border-bottom: solid 2px #FFD54F;
+}
+
+#login_title span {
+    font-size: 30px;
+}
+
+#login_form {
+    margin-top: 20px;
+}
+
+#login_form li {
+    margin-top: 10px;
+}
+
+#login_form input {
+    width: 350px;
+    height: 50px;
+    margin: 7px;
+}
+
+#login_form #login_btn {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.br {
+    margin: -3px;
+    padding: 70px;
+}

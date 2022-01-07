@@ -9,6 +9,14 @@ def home(request):
     buckets = Buckets.objects
     return render(request, 'mainpage.html', {'buckets' : buckets})
 
+def signin(request):
+    return render(request, 'signin.html')
 
-def addlist(request):
+def login(request):
+    return render(request, 'login.html')
+
+def newlist(request):
     return render(request, 'newlist.html')
+
+def mypage(request):
+    return render(request, 'mypage.html')

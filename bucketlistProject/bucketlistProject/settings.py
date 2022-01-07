@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-mcxj&scezl#pgspa&bte+ri#pp#xkw%h(o_b98y&=vv5@)p6(q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# DEBUG=True : 개발모드 / False : 운영모드
 ALLOWED_HOSTS = []
 
 
@@ -40,6 +41,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'mypage.apps.MypageConfig',
     'newlist.apps.NewListConfig',
+    
+    # 
 ]
 
 MIDDLEWARE = [
@@ -57,7 +60,7 @@ ROOT_URLCONF = 'bucketlistProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,9 +112,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -122,8 +125,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR.joinpath('static')]
+
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     '/bucketlistProjects/bucketlistProject/static/',
+# ]
+
+# 미디어 관련사항 지정
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

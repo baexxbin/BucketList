@@ -22,4 +22,5 @@ urlpatterns = [
     # 앱 등록
     path('', include('home.urls')),
     path('newlist/', include('newlist.urls')),
+    path('mypage/', include('mypage.urls')),
 ]
