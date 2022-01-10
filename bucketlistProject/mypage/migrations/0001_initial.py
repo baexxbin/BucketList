@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('target_at', models.DateTimeField()),
                 ('completed_at', models.DateTimeField(auto_now=True)),
-                ('owner', models.ForeignKey(db_column='owner', on_delete=django.db.models.deletion.CASCADE, related_name='owner', to='home.member')),
+                ('owner', models.ForeignKey(db_column='owner', on_delete=django.db.models.deletion.CASCADE, related_name='owner', to='mypage.member')),
             ],
         ),
     ]

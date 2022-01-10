@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Buckets
+from django.views.generic import ListView, DetailView
+from .models import Buckets,Member
 # from django.http import HttpResponse
 
 # Create your views here.
@@ -15,8 +16,8 @@ def signin(request):
 def login(request):
     return render(request, 'login.html')
 
-def newlist(request):
-    return render(request, 'newlist.html')
+# def newlist(request):
+#     return render(request, 'newlist.html')
 
-def mypage(request):
-    return render(request, 'mypage.html')
+# def mypage(request):
+#     return render(request, 'mypage.html')
